@@ -5,4 +5,8 @@ install: ## Install node module dependencies
 	npm install
 
 dev: ## Run application within a development environment
-	./node_modules/.bin/webpack-dev-server --progress --colors --config ./webpack/webpack.dev.config.js --content-base src
+	babel-node \
+	./node_modules/.bin/webpack-dev-server \
+	--progress \
+	--colors \
+	--config ./webpack/webpack.dev.config.js --content-base src
