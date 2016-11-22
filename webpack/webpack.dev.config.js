@@ -20,6 +20,7 @@ const DevConfig = {
             { test: /\.js$/, loaders: ['babel'], exclude: /node_modules/ },
             { test: /\.jsx?$/, loaders: ['babel'], exclude: /node_modules/ },
             { test: /\.scss$/, loader: 'style!css!sass', exclude: /node_modules/ },
+            { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' },
     ],
   },
   plugins: [
