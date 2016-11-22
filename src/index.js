@@ -15,3 +15,17 @@ function tick() {
 }
 
 setInterval(tick, 1000);
+
+function Welcome(props) {
+  return <div>Hello {props.name}</div>;
+}
+Welcome.propTypes = {
+  name: React.PropTypes.string,
+};
+
+const element = <Welcome name="Mikaël" />;
+
+ReactDOM.render(
+  element,
+  document.getElementById('welcome'),
+);
